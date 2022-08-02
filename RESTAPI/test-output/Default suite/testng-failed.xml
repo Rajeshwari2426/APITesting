@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.CQA.RESTAPI.SpotifyPlaylistsApi">
+      <class name="com.CQA.RESTAPI.Serialization">
         <methods>
-          <include name="GetCurrentUserPlaylists"/>
+          <include name="serialrize"/>
         </methods>
-      </class> <!-- com.CQA.RESTAPI.SpotifyPlaylistsApi -->
+      </class> <!-- com.CQA.RESTAPI.Serialization -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

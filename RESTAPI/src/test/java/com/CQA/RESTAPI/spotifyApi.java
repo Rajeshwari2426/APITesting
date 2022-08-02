@@ -11,7 +11,7 @@ import io.restassured.specification.RequestSpecification;
 
 public class spotifyApi {
 	public String userID;
-	String token = "Bearer BQDnroteGnwEZ3v9Wv3ufwLG2SeXQ6cDR9Bd8v3nbGsiyPikwm6t5y4DejigQ4NJ3a_HRGR_4qxILT4YPmgymktE41nlFnhN3GcYE-vanCiT0lUQhpxDVxl_12Fn5p_0eKC8flp7DB6R-kqXqAxGi5JAPNzTyo8upRLvTQBuvDvo1J8QNyz9tIKeYzOgr7meU6I";
+	String token = "Bearer BQAyZXKSKUd19o_wNq1Dt7hiSVNffQkkVbUgELZUAyI3bXSqV4yf9dobpwr_aWKOmbup_YAYNeFeIJM9yMxXU4UhGtqzJsAdjRN8aGST8cjjJp7eOMDsBJ5TCa-pfu0Sz7nC6R7bwuOUpDRbpMzFXgdqEFrk3C42yH1Gf5K1ET9dt5FHsy97jdKuVr6jnd6RWPM_oiruJmbaws0q4GY3zw8iL1W9w37lu1fy5j-Ge1pestSgharz5ybAg69vh14s";
 
 	@Test(priority = 1)
 	public void GetCurrentUsersProfile() {
@@ -28,7 +28,7 @@ public class spotifyApi {
 		Assert.assertEquals(statusCode, 200);
 	}
 
-	@Test
+	@Test(priority = 2)
 
 	public void GetUsersProfile() {
 		RequestSpecification requestSpecification = RestAssured.given();
@@ -36,7 +36,7 @@ public class spotifyApi {
 		requestSpecification.contentType("application/json");
 		requestSpecification.header("Authorization", token);
 
-		Response response = requestSpecification.request(Method.GET, "https://api.spotify.com/v1/users/"+ userID +"");
+		Response response = requestSpecification.request(Method.GET,"https://api.spotify.com/v1/users/+userID");
 
 		response.prettyPrint();
 		int statusCode = response.statusCode();

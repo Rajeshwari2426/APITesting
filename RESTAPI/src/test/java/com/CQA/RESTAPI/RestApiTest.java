@@ -162,7 +162,20 @@ public class RestApiTest
 		int statusCode=response.statusCode();
 		Assert.assertEquals(statusCode, 200);
 	}
-	
+	@Test(priority=10)
+	public void getProfile()
+	{
+		RequestSpecification requestSpecification=RestAssured.given();
+		requestSpecification.accept(ContentType.JSON);
+		requestSpecification.contentType("application/json");
+		
+				
+		Response response =requestSpecification.request(Method.GET,"  http://localhost:3000/profile");
+		
+		response.prettyPrint();
+		int statusCode=response.statusCode();
+		Assert.assertEquals(statusCode, 200);
+	}
 	
 
 }
