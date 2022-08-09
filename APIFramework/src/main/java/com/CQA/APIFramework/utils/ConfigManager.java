@@ -8,31 +8,32 @@ public class ConfigManager {
 
 	private static ConfigManager manager;
 	private static final Properties prop = new Properties();
-	//private String name;
+	// private String name;
 
-	private ConfigManager() {
-		 InputStream inputStream = ConfigManager.class.getResourceAsStream( "../resources/config.properties");
-		try {
-			prop.load(inputStream);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	private ConfigManager() throws IOException {
+		InputStream inputStream = ConfigManager.class.getResourceAsStream("/config.properties");
+
+		prop.load(inputStream);
+
 	}
 
-	public static ConfigManager getInstance() throws IOException {
-		if (manager == null) {
+	public static ConfigManager getInstance() {
+		if (manager== null) {
 			synchronized (ConfigManager.class) {
-				manager = new ConfigManager();
+				try {
+					manager =new ConfigManager();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
 			}
-
 		}
+		
 		return manager;
 
 	}
 
 	public String getString(String key) {
-		return System.getProperty(key, prop.getProperty(key));
+	return System.getProperty(key, prop.getProperty(key));
 	}
 
 }

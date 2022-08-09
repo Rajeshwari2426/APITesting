@@ -1,4 +1,3 @@
-
 package com.CQA.APIFramework.models;
 
 import java.util.HashMap;
@@ -15,54 +14,21 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-"name",
-"age",
-"address",
-"id"
+"id",
+"title",
+"author"
 })
 @Generated("jsonschema2pojo")
 public class Person {
 
-@JsonProperty("name")
-private String name;
-@JsonProperty("age")
-private Integer age;
-@JsonProperty("address")
-private String address;
 @JsonProperty("id")
 private Integer id;
+@JsonProperty("title")
+private String title;
+@JsonProperty("author")
+private String author;
 @JsonIgnore
 private Map<String, Object> additionalProperties = new HashMap<String, Object>();
-
-@JsonProperty("name")
-public String getName() {
-return name;
-}
-
-@JsonProperty("name")
-public void setName(String name) {
-this.name = name;
-}
-
-@JsonProperty("age")
-public Integer getAge() {
-return age;
-}
-
-@JsonProperty("age")
-public void setAge(Integer age) {
-this.age = age;
-}
-
-@JsonProperty("address")
-public String getAddress() {
-return address;
-}
-
-@JsonProperty("address")
-public void setAddress(String address) {
-this.address = address;
-}
 
 @JsonProperty("id")
 public Integer getId() {
@@ -74,6 +40,26 @@ public void setId(Integer id) {
 this.id = id;
 }
 
+@JsonProperty("title")
+public String getTitle() {
+return title;
+}
+
+@JsonProperty("title")
+public void setTitle(String title) {
+this.title = title;
+}
+
+@JsonProperty("author")
+public String getAuthor() {
+return author;
+}
+
+@JsonProperty("author")
+public void setAuthor(String author) {
+this.author = author;
+}
+
 @JsonAnyGetter
 public Map<String, Object> getAdditionalProperties() {
 return this.additionalProperties;
@@ -82,6 +68,34 @@ return this.additionalProperties;
 @JsonAnySetter
 public void setAdditionalProperty(String name, Object value) {
 this.additionalProperties.put(name, value);
+}
+
+@Override
+public String toString() {
+StringBuilder sb = new StringBuilder();
+sb.append(Person.class.getName()).append('@').append(Integer.toHexString(System.identityHashCode(this))).append('[');
+sb.append("id");
+sb.append('=');
+sb.append(((this.id == null)?"<null>":this.id));
+sb.append(',');
+sb.append("title");
+sb.append('=');
+sb.append(((this.title == null)?"<null>":this.title));
+sb.append(',');
+sb.append("author");
+sb.append('=');
+sb.append(((this.author == null)?"<null>":this.author));
+sb.append(',');
+sb.append("additionalProperties");
+sb.append('=');
+sb.append(((this.additionalProperties == null)?"<null>":this.additionalProperties));
+sb.append(',');
+if (sb.charAt((sb.length()- 1)) == ',') {
+sb.setCharAt((sb.length()- 1), ']');
+} else {
+sb.append(']');
+}
+return sb.toString();
 }
 
 }

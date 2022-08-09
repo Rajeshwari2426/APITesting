@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.CQA.APIFramework.TestGETPerson">
+      <class name="com.CQA.APIFramework.TestDELETEPerson">
         <methods>
-          <include name="testGetAllPerson"/>
+          <include name="testDeletePerson"/>
           <include name="init"/>
         </methods>
-      </class> <!-- com.CQA.APIFramework.TestGETPerson -->
+      </class> <!-- com.CQA.APIFramework.TestDELETEPerson -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

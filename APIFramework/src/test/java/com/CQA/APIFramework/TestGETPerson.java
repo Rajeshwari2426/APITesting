@@ -13,9 +13,15 @@ import com.CQA.APIFramework.models.Person;
 
 public class TestGETPerson {
 	private PersonServiceHelper personServiceHelper;
+	
 	@BeforeClass
-	public void init() {}
+	
+	public void init() {
+		personServiceHelper = new PersonServiceHelper();
+	}
+	
 	@Test
+	
 	public void  testGetAllPerson() {
 		List<Person>personList=personServiceHelper.getAllPerson();
 		assertNotNull(personList,"PersonList not empty");
