@@ -1,0 +1,1 @@
+{"uuid":"bb6242ff-1656-4f50-815f-ae663dcd7cdd","name":"com.CQA.APIFramework.TestDELETEPerson","children":["54c704cf-edd3-4927-8d2a-a73eb7ec284b"],"befores":[{"name":"init","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1660898028219,"stop":1660898029936}],"afters":[],"start":1660898028059,"stop":1660898036122}

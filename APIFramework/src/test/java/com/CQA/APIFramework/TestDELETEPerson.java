@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 
 import com.CQA.APIFramework.helpers.PersonServiceHelper;
 
+
 public class TestDELETEPerson {
 	private PersonServiceHelper personServiceHelper;
 	@BeforeClass
@@ -16,10 +17,11 @@ public class TestDELETEPerson {
 	
 	@Test
 	public void testDeletePerson() {
-		String id=personServiceHelper.deletePerson(7).jsonPath().getString("id");
+		String id=personServiceHelper.deletePerson(6).jsonPath().getString("id");
 		System.out.println(id);
 		assertNotNull(id,"person id not null");
 		
+	//personServiceHelper.deletePerson(6);
 	}
 	
 

@@ -67,7 +67,7 @@ public class SpotifyPlaylistsApi {
 		requestSpecification.contentType("application/json");
 		requestSpecification.header("Authorization" ,token);
 		
-		Response response =requestSpecification.request(Method.GET,"	https://api.spotify.com/v1/playlists/5pt3Az7OOLvxa5A6PHxaSY");
+		Response response =requestSpecification.request(Method.GET,"https://api.spotify.com/v1/playlists/5pt3Az7OOLvxa5A6PHxaSY");
 		
 		response.prettyPrint();
 		int statusCode=response.statusCode();

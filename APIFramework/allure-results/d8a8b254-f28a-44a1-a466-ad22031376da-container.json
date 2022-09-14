@@ -1,0 +1,1 @@
+{"uuid":"d8a8b254-f28a-44a1-a466-ad22031376da","name":"com.CQA.APIFramework.TestPOSTPerson","children":["bd7fb3dc-9cb8-4556-b058-4c7d400d0274"],"befores":[{"name":"init","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1660897866800,"stop":1660897868645}],"afters":[],"start":1660897866621,"stop":1660897888613}
